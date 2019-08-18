@@ -15,7 +15,7 @@ int addc(int a, int b) {
 
 int main(int argc, char **argv)
 {
-    lua_State *L = lua_open();
+    lua_State *L = luaL_newstate();
     luaL_openlibs(L);
     luaL_dofile(L, argv[1]);
     lua_close(L);
