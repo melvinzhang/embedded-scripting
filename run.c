@@ -2,6 +2,13 @@
 #include "lauxlib.h"
 #include "lualib.h"
 
+int G = 0;
+
+int increment(int c) {
+    G += c;
+    return G;
+}
+
 int addc(int a, int b) {
     return a+b;
 }
