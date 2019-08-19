@@ -2,10 +2,12 @@
 
 ## LuaJIT
 
-Uses Lua 5.1
+Language: Lua 5.1
 
 See run.c and lua files
 
-## Ducktape
+## Duktape
 
-In-progress
+Language: ECMAScript E5/E5.1
+
+See dt.c
