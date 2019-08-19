@@ -21,12 +21,17 @@ static duk_ret_t native_adder(duk_context *ctx) {
 
 int main(int argc, char *argv[]) {
     duk_context *ctx = duk_create_heap_default();
-    duk_push_c_function(ctx, native_print, 1 /*nargs*/);
-    duk_put_global_string(ctx, "print");
-	duk_push_c_function(ctx, native_adder, DUK_VARARGS);
-	duk_put_global_string(ctx, "adder");
     if (ctx) {
+        // register native function
+        duk_push_c_function(ctx, native_print, 1 /*nargs*/);
+        duk_put_global_string(ctx, "print");
+        duk_push_c_function(ctx, native_adder, DUK_VARARGS);
+        duk_put_global_string(ctx, "adder");
+
+        // interpret string
         duk_eval_string(ctx, "print('2+3=' + adder(2, 3));");
+
+        // cleanup
         duk_destroy_heap(ctx);
     }
     return 0;
