@@ -1,1 +1,11 @@
-# Using LuaJIT as an embedded scripting engine
+# Evaluating different scripting languages that can be embedded in a C application
+
+## LuaJIT
+
+Uses Lua 5.1
+
+See run.c and lua files
+
+## Ducktape
+
+In-progress
