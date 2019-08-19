@@ -1,4 +1,4 @@
-# Evaluating different scripting languages that can be embedded in a C application
+# Embedded scripting languages for a C application
 
 ## LuaJIT
 
