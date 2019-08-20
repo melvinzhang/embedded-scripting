@@ -17,7 +17,11 @@ int main(int argc, char **argv)
 {
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
-    luaL_dofile(L, argv[1]);
+    int status = luaL_dofile(L, argv[1]);
+    if (status) {
+        fprintf(stderr, "Error: %s\n", lua_tostring(L, -1));
+        return 1;
+    }
     lua_close(L);
     return 0;
 }
