@@ -6,15 +6,15 @@ int increment(int c);
 int G;
 ]]
 
-local G = ffi.C
+local C = ffi.C
 
 print(ffi.os)
-print(G.addc(1, 2))
-print(G.increment(5))
-print(G.increment(10))
+print("addc(1,2)", C.addc(1, 2))
+print("increment(5)", C.increment(5))
+print("increment(10)", C.increment(10))
 
-print(G.G)
-G.G = 4/5
-print(G.G)
+print("G", C.G)
+C.G = 4/5
+print("G=4/5", C.G)
 
-print(G.increment(5))
+print("increment(5)", C.increment(5))
