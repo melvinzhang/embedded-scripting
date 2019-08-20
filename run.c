@@ -13,8 +13,7 @@ int addc(int a, int b) {
     return a+b;
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
     int status = luaL_dofile(L, argv[1]);
