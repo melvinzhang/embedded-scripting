@@ -6,9 +6,9 @@ Language: Lua 5.1
 
 See run.c and lua files
 
-Pro: well established and widely used, fast
+Pro: well established and widely used, fast, good cffi with minimal boilerplate
 
-Con: Need to export functions to use in ffi, large footprint
+Con: Need to export functions to use in ffi, large footprint, additional dependency
 
 ## Duktape
 
@@ -18,4 +18,4 @@ See dt.c
 
 Pro: single source and header file
 
-Con: ECMAScript weirdness
+Con: ECMAScript weirdness, more complicated cffi
